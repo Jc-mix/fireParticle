@@ -1,1 +1,13 @@
-# fireParticle
+- 实现一个简单的粒子系统，这里实现的是一个蜡烛或者说篝火
+- 这里使用的是4x4贴图组
+- 首先添加一个ParticleSystem，命名为fire
+- 把4x4贴图直接拖到fire
+- 设置Duration=1， 勾选Looping， Prewarm，Satrt Lifetime=1, Start Speed=2, Start Size=1, Start Rotation设置为Random between two Constants， 分别为-360~360
+- Emission模块：Rate初始速度设为20
+- Shape模块：Shape=Cone, Angle=0,Radius=0.01
+- Color over Lifetime模块：设置颜色条，开头和结尾设为透明，实现火焰渐进渐出效果
+- Rotation over LifeTime模块：设为Random between two Constants，为-45~45
+- Texture Sheet Animation模块：Tiles.x=4, Tiles.y=4, Animation=Whole Sheet(意为把贴图切分成4x4，16块， 解释为整图扫描)，再而观察和调整Frame Sheet Animation，这里设为直线下落
+- 最后是Shader：Particles/Additive
+ 
+- 以上，一个简单的火焰粒子系统完成，最后制作成prefab， 在Resources/Prefabs下
